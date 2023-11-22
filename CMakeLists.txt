@@ -12,18 +12,10 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_EXTENSIONS OFF)
 
 # Add all the source files
-file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/* lib/*)
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/* lib/random.cpp)
 target_sources(${PROJECT_NAME} PRIVATE ${SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE src lib)
 
-# Download the sil library
-include(FetchContent)
-FetchContent_Declare(
-    sil
-    GIT_REPOSITORY https://github.com/JulesFouchy/Simple-Image-Lib
-    GIT_TAG 89bd175cd55fb6daa9e99b218e869c3d516043f4
-)
-FetchContent_MakeAvailable(sil)
-
-# Link sil into the project
+# Link the sil library into the project
+add_subdirectory(lib/sil)
 target_link_libraries(${PROJECT_NAME} PRIVATE sil)
