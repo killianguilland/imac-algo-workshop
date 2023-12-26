@@ -19,6 +19,11 @@ float random_float(float min, float max)
     return distribution(generator());
 }
 
+bool true_with_probability(float probability_of_beeing_true)
+{
+    return random_float(0.f, 1.f) < probability_of_beeing_true;
+}
+
 void set_random_seed(int seed)
 {
     generator().seed(seed);
