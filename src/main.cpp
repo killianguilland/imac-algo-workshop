@@ -18,17 +18,17 @@ void pngs_to_gif(const std::string prefix = "") {
 
 int main() // Circle
 {
-    sil::Image image {500/*width*/, 1000/*height*/};
-    glm::vec2 center ;
-    rectangle(image, {0, 0}, 500, 1000, 0.96f, 0.5f, 1.0f);
-    rectangle(image, {250, 500}, 100, 450, 0.25f, 0.25f, 0.25f);
-    rectangle(image, {100, 900}, 50, 50, 0.25f, 0.25f, 0.25f);
-    rectangle(image, {400, 900}, 50, 50, 0.25f, 0.25f, 0.25f);
-    eye(image, {200, 860});
-    eye(image, {300, 860});
-    circle(image, {250, 50}, 20, 20, 0.0f, 0.0f, 0.0f);
-    rectangle(image, {250, 65}, 20, 10, 0.0f, 0.0f, 0.0f);
-    image.save("output/11.png");
+    // sil::Image image {500/*width*/, 1000/*height*/};
+    // glm::vec2 center ;
+    // rectangle(image, {0, 0}, 500, 1000, 0.96f, 0.5f, 1.0f);
+    // rectangle(image, {250, 500}, 100, 450, 0.25f, 0.25f, 0.25f);
+    // rectangle(image, {100, 900}, 50, 50, 0.25f, 0.25f, 0.25f);
+    // rectangle(image, {400, 900}, 50, 50, 0.25f, 0.25f, 0.25f);
+    // eye(image, {200, 860});
+    // eye(image, {300, 860});
+    // circle(image, {250, 50}, 20, 20, 0.0f, 0.0f, 0.0f);
+    // rectangle(image, {250, 65}, 20, 10, 0.0f, 0.0f, 0.0f);
+    // image.save("output/11.png");
 
     // sil::Image image {500/*width*/, 1000/*height*/};
 
@@ -68,9 +68,9 @@ int main() // Circle
     // gradient(image);
     // image.save("output/5.png");
 
-    // sil::Image image{"images/photo_faible_contraste.jpg"};
-    // histogram_normalization(image);
-    // image.save("output/histogram.png");
+    sil::Image image{"images/photo_faible_contraste.jpg"};
+    histogram_normalization(image);
+    image.save("output/histogram.png");
 
     // sil::Image image{500, 500};
     // circle(image, {250, 250}, 200, 200, 1.0f, 1.0f, 1.0f);

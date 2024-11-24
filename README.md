@@ -168,6 +168,8 @@ J'ai appliqué la formule pour l'effet mandelbrot. Pour faire varier l'intensit�
 | ![Input Image](images/photo_faible_contraste.jpg) | ![Output Image](output/histogram.png) |
 | ------------------------------- | -------------------------------------- |
 | **Input**                       | **Output**                             |
+On boucle deux fois sur l'image. La première fois, on cherche le pixel le plus sombre et le pixel le plus lumineux de l'image.
+La deuxième fois, on repasse sur tous les pixels pour corriger leur luminosité. La valeur du pixel est normalisée en soustrayant min_brightness et en divisant par la plage de luminosité (max_brightness - min_brightness). Cette opération ramène toutes les valeurs de couleur dans l'intervalle [0, 1], améliorant ainsi le contraste de l'image.
 
 
 ### ⭐⭐⭐⭐⭐⭐ Diamond Square

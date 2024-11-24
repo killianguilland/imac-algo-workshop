@@ -325,12 +325,20 @@ void histogram_normalization(sil::Image& image) {
 
     std::cout << "min: " << min_brightness << " max: " << max_brightness << std::endl;
 
-    for (glm::vec3 color : image.pixels())
+    for (glm::vec3& color : image.pixels())
     {
         color.r = (color.r - min_brightness) / (max_brightness - min_brightness);
         color.g = (color.g - min_brightness) / (max_brightness - min_brightness);
         color.b = (color.b - min_brightness) / (max_brightness - min_brightness);
     }
+
+
+    // for (glm::vec3 color : image.pixels())
+    // {
+    //     color.r = (color.r - min_brightness) / (max_brightness - min_brightness);
+    //     color.g = (color.g - min_brightness) / (max_brightness - min_brightness);
+    //     color.b = (color.b - min_brightness) / (max_brightness - min_brightness);
+    // }
 }
 
 void print_2D_vector(const std::vector<std::vector<float>>& vector)
